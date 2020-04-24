@@ -1,0 +1,2 @@
+# YuGiOh-TCG
+school project

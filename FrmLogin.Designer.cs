@@ -35,13 +35,14 @@
             this.btnSignUp = new System.Windows.Forms.Button();
             this.lblSignUp = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cBShowPass = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtPassword.Location = new System.Drawing.Point(101, 90);
+            this.txtPassword.Location = new System.Drawing.Point(101, 69);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(230, 20);
             this.txtPassword.TabIndex = 1;
@@ -53,7 +54,7 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtEmail.Location = new System.Drawing.Point(101, 51);
+            this.txtEmail.Location = new System.Drawing.Point(101, 35);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(230, 20);
             this.txtEmail.TabIndex = 2;
@@ -67,12 +68,13 @@
             this.btnLogIn.BackColor = System.Drawing.Color.Transparent;
             this.btnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogIn.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogIn.Location = new System.Drawing.Point(383, 69);
+            this.btnLogIn.Location = new System.Drawing.Point(367, 47);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.Size = new System.Drawing.Size(75, 33);
             this.btnLogIn.TabIndex = 3;
             this.btnLogIn.Text = "Log In";
             this.btnLogIn.UseVisualStyleBackColor = false;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // btnSignUp
             // 
@@ -111,6 +113,19 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "sign up";
             // 
+            // cBShowPass
+            // 
+            this.cBShowPass.AutoSize = true;
+            this.cBShowPass.BackColor = System.Drawing.Color.Transparent;
+            this.cBShowPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBShowPass.Location = new System.Drawing.Point(325, 95);
+            this.cBShowPass.Name = "cBShowPass";
+            this.cBShowPass.Size = new System.Drawing.Size(65, 19);
+            this.cBShowPass.TabIndex = 7;
+            this.cBShowPass.Text = "Show ";
+            this.cBShowPass.UseVisualStyleBackColor = false;
+            this.cBShowPass.CheckedChanged += new System.EventHandler(this.cBShowPass_CheckedChanged);
+            // 
             // FrmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,6 +133,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(641, 357);
+            this.Controls.Add(this.cBShowPass);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblSignUp);
             this.Controls.Add(this.btnSignUp);
@@ -139,6 +155,7 @@
         private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.Label lblSignUp;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox cBShowPass;
     }
 }
 

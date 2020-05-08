@@ -53,7 +53,27 @@ namespace _200424_YuGiOh_PoC_Lejkic_Edition
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             FrmSignUp sU = new FrmSignUp();
+            sU.Show();
+        }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmStartUp sU = new FrmStartUp();
             sU.ShowDialog();
+            this.Close();
+        }
+
+        private void cBShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cBShowPass.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 }
